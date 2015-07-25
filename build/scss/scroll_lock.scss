@@ -1,0 +1,53 @@
+.js-scroll_lock_removed {
+	&:after, &:before {
+		display:none !important;
+	}
+}
+
+.scroll_lock {
+
+		position:relative;
+
+		&:before {
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			width:200px;
+			margin:0 auto;
+			height:30px;
+			text-align:center;
+			padding-top:5px;		
+
+			background-color:none;
+			content:"";			
+
+			color:white;
+
+		}
+
+
+		&:after {
+			content:"";
+
+			text-align:center;
+			cursor:pointer;
+			position:absolute;
+			top:0;
+			left:0;
+			display:block;
+			width:100%;
+			height:418px;
+			opacity:0.6;
+		}
+
+		&:hover {
+			&:before {
+
+				background-color:rgba(0,0,0,0.8);
+				content:attr(data-hint);
+				color:white;
+			}
+		}
+}
