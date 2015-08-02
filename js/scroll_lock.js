@@ -1,8 +1,10 @@
 'use strict';
+querySelectorAll = document.querySelectorAll.bind(document);
 
-var scroll_lock = document.querySelectorAll('.scroll_lock');
 
-if(document.querySelectorAll('.scroll_lock').length) {
+var scroll_lock = querySelectorAll('.scroll_lock');
+
+if(querySelectorAll('.scroll_lock').length) {
 
 	for (var i = scroll_lock.length - 1; i >= 0; i--) {
 
